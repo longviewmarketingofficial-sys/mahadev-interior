@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Sofa, Wind, BedDouble, AlignJustify, AlignCenter, Blinds, ArrowRight, ShoppingBag } from 'lucide-react'

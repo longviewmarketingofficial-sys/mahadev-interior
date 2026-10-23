@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, Phone, Calculator, X } from 'lucide-react'

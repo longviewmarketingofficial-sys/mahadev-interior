@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown, MessageCircle, Phone, Star, Award } from 'lucide-react'

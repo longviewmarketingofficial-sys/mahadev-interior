@@ -17,7 +17,7 @@
   body {
     background-color: #0a0a0c;
     color: #FAFAF8;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -48,11 +48,11 @@
 
 @layer components {
   .font-display {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
   }
 
   .font-serif {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
   }
 
   .gold-text {
@@ -97,7 +97,7 @@
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), 'Inter', sans-serif;
     font-size: 14px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -131,7 +131,7 @@
     padding: 13px 32px;
     border-radius: 4px;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), 'Inter', sans-serif;
     font-size: 14px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -147,7 +147,7 @@
   }
 
   .section-label {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), 'Inter', sans-serif;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.3em;
@@ -163,7 +163,7 @@
   }
 
   .nav-link {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.08em;
@@ -252,47 +252,6 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
-/* Before/after slider */
-.before-after-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  cursor: ew-resize;
-  user-select: none;
-}
-
-.before-after-container img {
-  pointer-events: none;
-}
-
-/* Counter animation */
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Particle/grain overlay */
-.grain-overlay::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.04;
-}
-
-/* Smooth section transitions */
-section {
-  position: relative;
-}
-
-/* Modal backdrop */
-.modal-backdrop {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
 /* WhatsApp pulse */
 @keyframes whatsapp-pulse {
   0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
@@ -312,9 +271,4 @@ section {
 
 .call-pulse {
   animation: call-pulse 2s infinite 0.5s;
-}
-
-/* Map iframe */
-.map-frame {
-  filter: grayscale(100%) invert(90%) contrast(90%) sepia(20%);
 }
